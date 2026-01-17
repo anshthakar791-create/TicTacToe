@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tic Tac Toe — Ansh</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark">
+  <!-- Winner popup -->
+  <div class="msg-container hide" id="popup">
+    <div class="popup-inner">
+      <h2 id="msg">WINNER</h2>
+      <button id="new">Play Again</button>
+    </div>
+  </div>
+
+  <main>
+    <h1>Tic Tac Toe</h1>
+
+    <div class="controls">
+      <div class="left-controls">
+        <label for="mode">Mode:</label>
+        <select id="mode">
+          <option value="human">2 Player</option>
+          <option value="ai">Vs Computer</option>
+        </select>
+
+        <button id="modeBtn">Light Mode</button>
+      </div>
+
+      <div class="right-controls">
+        <h3 id="turnText">Turn: O</h3>
+      </div>
+    </div>
+
+    <div class="scoreboard">
+      <p>O Wins: <span id="oScore">0</span></p>
+      <p>X Wins: <span id="xScore">0</span></p>
+      <p>Draws: <span id="drawScore">0</span></p>
+    </div>
+
+    <div class="container">
+      <div class="game" id="board">
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+      </div>
+    </div>
+
+    <div class="bottom-controls">
+      <button id="rb">Reset Board</button>
+    </div>
+  </main>
+
+  <!-- Audio (place MP3 files in same folder or change src) -->
+  <audio id="clickSound" src="click.wav"></audio>
+  <audio id="winSound" src="win.wav"></audio>
+  <audio id="drawSound" src="draw.wav"></audio>
+
+  <!-- Confetti library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js" defer></script>
+  <!-- Your main script (no spaces in filename) -->
+  <script src="tic tac toe.js" defer></script>
+</body>
+</html>
